@@ -1,5 +1,5 @@
 # spring-cloud-sleuth-cloudwatch
-Spring cloud application loggin onto console and onto AWS CloudWatch using spring-cloud-sleuth.
+Spring cloud application loggin onto console, file and AWS CloudWatch using spring-cloud-sleuth.
 
 # The problem
 Currently AWS SDK for java give us appender for log4j.
