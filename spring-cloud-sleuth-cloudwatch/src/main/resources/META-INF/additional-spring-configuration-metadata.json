@@ -1,0 +1,12 @@
+{"properties": [
+    {
+    "name": "com.pgrabarczyk.spring.sleuth.cloudwatch.log.group",
+    "type": "java.lang.String",
+    "description": "Log Group name for CloudWatch"
+  },
+  {
+    "name": "com.pgrabarczyk.spring.sleuth.cloudwatch.log.stream",
+    "type": "java.lang.String",
+    "description": "Log Stream name for CloudWatch."
+  }
+]}

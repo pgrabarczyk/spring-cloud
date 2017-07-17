@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+	<springProperty name="logGroup" source="com.pgrabarczyk.spring.sleuth.cloudwatch.log.group" />
+	<springProperty name="logStream" source="com.pgrabarczyk.spring.sleuth.cloudwatch.log.stream" />
+
+	<appender name="CLOUDWATCH" class="org.eluder.logback.ext.cloudwatch.appender.CloudWatchAppender">
+		<region>eu-west-2</region>
+		<logGroup>${logGroup}</logGroup>
+		<logStream>${logStream}</logStream>
+		<encoder class="org.eluder.logback.ext.jackson.JacksonEncoder">
+			<timeStampFormat>yyyy-MM-dd'T'HH:mm:ss.SSS</timeStampFormat>
+		</encoder>
+	</appender>
+
+</included>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<!-- Include default spring-boot config -->
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<include resource="logback/console.xml" />
+	<include resource="logback/file.xml" />
+ 	<include resource="logback/cloudwatch.xml" />
+
+	<logger name="com.pgrabarczyk.spring.cloud.shop.cloudwatch.controller" level="DEBUG" additivity="false">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="CLOUDWATCH" />
+	</logger>
+
+	<root level="info">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+ 		<appender-ref ref="CLOUDWATCH" />
+	</root>
+
+</configuration>
+
