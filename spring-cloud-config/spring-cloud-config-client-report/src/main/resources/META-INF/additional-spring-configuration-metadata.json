@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "db.user",
+    "type": "java.lang.String",
+    "description": "A description for 'db.user'"
+  },
+  {
+    "name": "db.password",
+    "type": "java.lang.String",
+    "description": "A description for 'db.password'"
+  }
+]}
