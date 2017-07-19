@@ -1,17 +1,17 @@
 # spring-cloud-sleuth-cloudwatch
 Spring cloud application loggin onto console, file and AWS CloudWatch using spring-cloud-sleuth.
 
-# The problem
+### The problem
 Currently AWS SDK for java give us appender for log4j.
 
 spring-cloud-sleuth works for slf4j (logback).
 
-# The solution
+### The solution
 Solution is to use [CloudWatch Appender](https://github.com/trautonen/logback-ext/tree/master/logback-ext-cloudwatch-appender)
 
 Big thanks to [Tapio Rautonen](https://github.com/trautonen)
 
-# To make app work and log into cloudwatch
+### To make app work and log into cloudwatch
 Create log group and log stream onto AWS CloudWatch and change their names
 
 ```
@@ -26,7 +26,7 @@ src/main/resources/application.properties
 
 
 
-# If not works
+### If not works
 Check IAM roles as mentioned in [CloudWatch Appender](https://github.com/trautonen/logback-ext/tree/master/logback-ext-cloudwatch-appender)
 
 EC2 where I ran this app had policy:
