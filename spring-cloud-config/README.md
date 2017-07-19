@@ -2,7 +2,7 @@
 Spring cloud applications presents use of spring cloud config server and client.
 
 
-# Configuration
+### Configuration
 ReportController in client have 2 fields annotared with @Value. Those values are injected from config-server from files:
 ```
 spring-cloud-config-server/src/main/resources/config/report/report-qa.properties
@@ -20,7 +20,7 @@ in:
 spring-cloud-config-client-report/src/main/resources/bootstrap.properties
 ```
 
-# Run
+### Run
 First run config server.
 Then run config client-report.
 
