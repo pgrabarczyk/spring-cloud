@@ -3,10 +3,12 @@
 
 	<springProperty name="applicationName" source="spring.application.name" />
 
+	<property name="FILE_LOG_PATTERN_MICROSECONDS" value="${FILE_LOG_PATTERN_MICROSECONDS:-%d{yyyy-MM-dd HH:mm:ss.SSS000} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>logs/${applicationName}.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>${FILE_LOG_PATTERN}</Pattern>
+            <Pattern>${FILE_LOG_PATTERN_MICROSECONDS}</Pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
